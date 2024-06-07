@@ -15,20 +15,32 @@ form {
     padding: 20px;
     background: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Ajoute des bords arrondis au formulaire */
 }
 
 label, input, select, button {
     display: block;
     width: 100%;
     margin-bottom: 10px;
+    padding: 10px;
+    box-sizing: border-box; /* Assure que le padding est inclus dans la largeur totale */
+}
+
+input, select {
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Bords arrondis pour les champs d'entrée et le menu déroulant */
+    padding: 8px;
+    font-size: 16px;
 }
 
 button {
     background-color: #007BFF;
     color: white;
     border: none;
+    border-radius: 5px; /* Bords arrondis pour le bouton */
     padding: 10px;
     cursor: pointer;
+    font-size: 16px;
 }
 
 button:hover {
@@ -41,10 +53,37 @@ button:hover {
     padding: 20px;
     background: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Ajoute des bords arrondis à la zone des participants */
 }
 
 .participant {
     margin-bottom: 10px;
     padding: 10px;
     background-color: #e9ecef;
+    border-radius: 5px; /* Bords arrondis pour les éléments participants */
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    #participants {
+        padding: 15px;
+    }
+
+    label, input, select, button {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    button {
+        padding: 8px;
+        font-size: 14px;
+    }
 }
