@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label, input, select, button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#participants {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.participant {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #e9ecef;
+}

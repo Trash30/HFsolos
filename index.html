@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hellfest 2024</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Hellfest 2024</h1>
+    <form id="registrationForm">
+        <label for="pseudo">Pseudo/Prénom:</label>
+        <input type="text" id="pseudo" name="pseudo" required>
+
+        <label for="stage">Choisissez une scène:</label>
+        <select id="stage" name="stage" required>
+            <option value="Altar">Altar</option>
+            <option value="Temple">Temple</option>
+            <option value="Valley">Valley</option>
+            <option value="Main Stage 1">Main Stage 1</option>
+            <option value="Main Stage 2">Main Stage 2</option>
+        </select>
+
+        <button type="submit">S'inscrire</button>
+    </form>
+
+    <h2>Liste des Participants</h2>
+    <div id="participants"></div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
