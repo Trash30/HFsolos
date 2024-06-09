@@ -24,24 +24,34 @@ document.addEventListener('DOMContentLoaded', (event) => {
             };
 
             saveParticipant(participant);
-            addParticipantToDOM(participant);
-
-            document.getElementById('registrationForm').reset();
         }
     });
 });
 
 function saveParticipant(participant) {
-    let participants = JSON.parse(localStorage.getItem('participants')) || [];
-    participants.push(participant);
-    localStorage.setItem('participants', JSON.stringify(participants));
+    fetch('http://localhost:3000/participants', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(participant)
+    })
+    .then(response => response.json())
+    .then(data => {
+        addParticipantToDOM(data);
+    })
+    .catch(error => console.error('Erreur:', error));
 }
 
 function loadParticipants() {
-    let participants = JSON.parse(localStorage.getItem('participants')) || [];
-    participants.forEach(participant => {
-        addParticipantToDOM(participant);
-    });
+    fetch('http://localhost:3000/participants')
+    .then(response => response.json())
+    .then(data => {
+        data.forEach(participant => {
+            addParticipantToDOM(participant);
+        });
+    })
+    .catch(error => console.error('Erreur:', error));
 }
 
 function addParticipantToDOM(participant) {
